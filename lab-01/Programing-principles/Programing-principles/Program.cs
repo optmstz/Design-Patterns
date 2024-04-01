@@ -24,13 +24,12 @@ namespace CheckTask
 
         public static void CurrencyTest()
         {
-            Money[] currencyArray = {
-                new Money(1302, 290),
+            CurrencyMoney[] currencyArray = {
                 new GrivnaMoney(2390, 232),
                 new DollarMoney(30, 20),
-                new EuroMoney(329, 23),
-                new NoCurrencyMoney(329, 23)
+                new EuroMoney(329, 23)
             };
+
 
             foreach (var currency in currencyArray)
             {
@@ -38,16 +37,17 @@ namespace CheckTask
             }
         }
 
+
         public static void ProductTest()
         {
             var productManager = new ProductManager();
             var testProduct = new Product("Coca-Cola", "Sweet water", new GrivnaMoney(30, 12));
             var testReducePrice = new GrivnaMoney(10, 3);
 
-            Console.WriteLine($"Product name: \"{testProduct.name}\"\n\tcategory: {testProduct.category}\n\tprice: {testProduct.price.DisplayAmount()}\n");
+            Console.WriteLine($"Product name: \"{testProduct.name}\"\n\tcategory: {testProduct.category}\n\tprice: {testProduct.currency.DisplayAmount()}\n");
 
             productManager.ReduceProductPrice(testProduct, testReducePrice);
-            Console.WriteLine($"Reduce value: {testReducePrice.DisplayAmount()}\nPrice after reducing: {testProduct.price.DisplayAmount()}\n");
+            Console.WriteLine($"Reduce value: {testReducePrice.DisplayAmount()}\nPrice after reducing: {testProduct.currency.DisplayAmount()}\n");
         }
 
         public static Warehouse WarehouseTest()

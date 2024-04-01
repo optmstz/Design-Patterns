@@ -1,22 +1,23 @@
 ﻿using ClassLibrary.MoneyPart;
+using ClassLibrary.MoneyPart.Currency;
 
 namespace ClassLibrary.ProductPart.Manager
 {
     public class ProductManager
     {
 
-        public void ReduceProductPrice(IProduct productInfo, Money reductionAmount)
+        public void ReduceProductPrice(IProduct productInfo, CurrencyMoney reductionAmount)
         {
-            if (productInfo.price.wholePart > reductionAmount.wholePart ||
-                productInfo.price.wholePart == reductionAmount.wholePart && productInfo.price.fractionalPart >= reductionAmount.fractionalPart)
+            if (productInfo.currency.amount.wholePart > reductionAmount.amount.wholePart ||
+                productInfo.currency.amount.wholePart == reductionAmount.amount.wholePart && productInfo.currency.amount.fractionalPart >= reductionAmount.amount.fractionalPart)
             {
-                productInfo.price.wholePart -= reductionAmount.wholePart;
-                productInfo.price.fractionalPart -= reductionAmount.fractionalPart;
+                productInfo.currency.amount.wholePart -= reductionAmount.amount.wholePart;
+                productInfo.currency.amount.fractionalPart -= reductionAmount.amount.fractionalPart;
 
-                if (productInfo.price.fractionalPart < 0)
+                if (productInfo.currency.amount.fractionalPart < 0)
                 {
-                    productInfo.price.wholePart--;
-                    productInfo.price.fractionalPart += 100;
+                    productInfo.currency.amount.wholePart--;
+                    productInfo.currency.amount.fractionalPart += 100;
                 }
             }
             else

@@ -1,4 +1,5 @@
 ﻿using ClassLibrary.MoneyPart;
+using ClassLibrary.MoneyPart.Currency;
 
 namespace ClassLibrary.ProductPart
 {
@@ -7,13 +8,13 @@ namespace ClassLibrary.ProductPart
         public string name { get; protected set; }
         public string category { get; protected set; }
 
-        public Money price { get; protected set; }
+        public CurrencyMoney currency { get; protected set; }
 
-        public Product(string name, string category, Money price)
+        public Product(string name, string category, CurrencyMoney price)
         {
             this.name = name;
             this.category = category;
-            this.price = price;
+            this.currency = price;
         }
 
     }

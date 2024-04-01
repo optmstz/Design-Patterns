@@ -25,7 +25,7 @@ namespace ClassLibrary.WarehousePart
                 foreach (var product in products)
                 {
                     Console.WriteLine($"Name: {product.name}, Category: {product.category}," +
-                        $" Price: {product.price.DisplayAmount()}, Quantity: {product.quantity}," +
+                        $" Price: {product.currency.DisplayAmount()}, Quantity: {product.quantity}," +
                         $" Last Stocked Date: {product.lastStockedDate}");
                 }
             }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary.MoneyPart;
+using ClassLibrary.MoneyPart.Currency;
 
 namespace ClassLibrary.ProductPart
 {
@@ -11,6 +12,6 @@ namespace ClassLibrary.ProductPart
     {
         string name { get; }
         string category { get; }
-        Money price { get; }
+        CurrencyMoney currency { get; }
     }
 }

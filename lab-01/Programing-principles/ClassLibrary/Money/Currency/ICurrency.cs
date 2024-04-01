@@ -8,7 +8,10 @@ namespace ClassLibrary.MoneyPart.Currency
 {
     public interface ICurrency
     {
-        string currency { get; set; }
+        string currencyName { get; set; }
+        IMoney amount { get; }
+
+        string DisplayAmount();
     }
 }
 

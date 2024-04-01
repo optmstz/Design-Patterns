@@ -7,53 +7,41 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.MoneyPart.Currency
 {
-    public class GrivnaMoney : Money, ICurrency
+    public abstract class CurrencyMoney : ICurrency
     {
-        public string currency { get; set; } = "UAH";
+        public string currencyName { get; set; }
+        public IMoney amount { get; private set; }
 
-        public GrivnaMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart)
+        protected CurrencyMoney(int wholePart, int fractionalPart, string currency)
         {
-
+            amount = new Money(wholePart, fractionalPart);
+            this.currencyName = currency;
         }
-        public override string DisplayAmount()
+
+        public virtual string DisplayAmount()
         {
-            return $"{wholePart}.{fractionalPart} {currency}";
+            return $"{amount.DisplayAmount()} {currencyName}";
         }
     }
 
-    public class DollarMoney : Money, ICurrency
+    public class GrivnaMoney : CurrencyMoney
     {
-        public string currency { get; set; } = "USD";
-
-        public DollarMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart)
+        public GrivnaMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart, "UAH")
         {
-
-        }
-        public override string DisplayAmount()
-        {
-            return $"{wholePart}.{fractionalPart} {currency}";
         }
     }
 
-    public class EuroMoney : Money, ICurrency
+    public class DollarMoney : CurrencyMoney
     {
-        public string currency { get; set; } = "EUR";
-
-        public EuroMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart)
+        public DollarMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart, "USD")
         {
-
-        }
-        public override string DisplayAmount()
-        {
-            return $"{wholePart}.{fractionalPart} {currency}";
         }
     }
 
-    public class NoCurrencyMoney : Money
+    public class EuroMoney : CurrencyMoney
     {
-        public NoCurrencyMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart)
+        public EuroMoney(int wholePart, int fractionalPart) : base(wholePart, fractionalPart, "EUR")
         {
-
         }
     }
 }

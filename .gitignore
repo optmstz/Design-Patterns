@@ -2,3 +2,4 @@ bin/
 obj/
 .vs/
 .idea/
+/lab-02/AbstractFactory/AbstractFactoryClassLibrary/Class1.cs

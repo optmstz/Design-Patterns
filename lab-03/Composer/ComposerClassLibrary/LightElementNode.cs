@@ -63,5 +63,9 @@ namespace ComposerClassLibrary
 
             return sb.ToString();
         }
+        public List<LightNode> GetChildren()
+        {
+            return _children;
+        }
     }
 }

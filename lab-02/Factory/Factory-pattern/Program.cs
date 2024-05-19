@@ -1,6 +1,8 @@
 ﻿using Generating_patterns_class_library;
 using Generating_patterns_class_library.Factories;
 using Generating_patterns_class_library.Purchasers;
+using System;
+using System.Collections.Generic;
 
 namespace VideoProviderSubscriptions
 {

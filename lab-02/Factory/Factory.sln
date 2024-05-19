@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-<<<<<<< Updated upstream
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPatternClassLibrary", "Factory-pattern-class-library\FactoryPatternClassLibrary.csproj", "{5F919643-F61C-47F2-B0B7-512F1ABB3FAC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryClient", "Factory-pattern\FactoryClient.csproj", "{F3E66B84-41FE-4022-B96D-79A716DF144A}"
-=======
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPatternClassLibrary", "Factory-pattern-class-library\FactoryPatternClassLibrary.csproj", "{5F919643-F61C-47F2-B0B7-512F1ABB3FAC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryClient", "Factory-pattern\FactoryClient.csproj", "{F3E66B84-41FE-4022-B96D-79A716DF144A}"
->>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

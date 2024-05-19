@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AbstractFactoryClassLibrary.Factory.IPhoneDeviceFactory" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Factory\IPhoneDeviceFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Factory.SamsungDeviceFactory" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Factory\SamsungDeviceFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="1.269" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Factory.XiaomiDeviceFactory" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Factory\XiaomiDeviceFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.563" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.IPhoneLaptop" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\IPhoneDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.IPhoneNetbook" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\IPhoneDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.IPhoneEBook" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAA=</HashCode>
+      <FileName>Devices\IPhoneDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.IPhoneSmartphone" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\IPhoneDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.SamsungLaptop" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\SamsungDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.SamsungNetbook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\SamsungDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.SamsungEBook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAA=</HashCode>
+      <FileName>Devices\SamsungDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.SamsungSmartphone" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\SamsungDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.XiaomiLaptop" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\XiomiDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.XiaomiNetbook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\XiomiDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.XiaomiEBook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAA=</HashCode>
+      <FileName>Devices\XiomiDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryClassLibrary.Devices.XiaomiSmartphone" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\XiomiDevices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.178" />
+  </Class>
+  <Interface Name="AbstractFactoryClassLibrary.Factory.IDeviceFactory">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Factory\IDeviceFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AbstractFactoryClassLibrary.Devices.Interfaces.IEBook">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAA=</HashCode>
+      <FileName>Devices\Interfaces\IEBook.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AbstractFactoryClassLibrary.Devices.Interfaces.ILaptop">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\Interfaces\ILaptop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AbstractFactoryClassLibrary.Devices.Interfaces.INetbook">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>Devices\Interfaces\INetBook.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AbstractFactoryClassLibrary.Devices.Interfaces.IProcessor">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\Interfaces\IProccesor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AbstractFactoryClassLibrary.Devices.Interfaces.ISmartphone">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\Interfaces\ISmartphone.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

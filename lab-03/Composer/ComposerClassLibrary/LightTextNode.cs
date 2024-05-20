@@ -13,6 +13,7 @@ namespace ComposerClassLibrary
         public LightTextNode(string text)
         {
             _text = text;
+            OnTextRendered();
         }
 
         public override string OuterHTML()
@@ -23,6 +24,11 @@ namespace ComposerClassLibrary
         public override string InnerHTML()
         {
             return "";
+        }
+
+        protected override void OnTextRendered()
+        {
+            Console.WriteLine("LightTextNode: Text rendered.");
         }
     }
 }

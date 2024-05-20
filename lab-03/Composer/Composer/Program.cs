@@ -1,36 +1,27 @@
-﻿using ComposerClassLibrary;
+﻿using ComposerClassLibrary.Visitor;
+using ComposerClassLibrary;
+using System;
+using System.Collections.Generic;
 
-class Program
+namespace ComposerClassLibrary
 {
-    static void Main(string[] args)
+    class Program
     {
+        static void Main(string[] args)
+        {
+            var nodes = new List<LightNode>
+            {
+                new LightElementNode("div", isBlock: true, isSelfClosing: false),
+                new LightTextNode("Hello, "),
+                new LightElementNode("span", isBlock: false, isSelfClosing: false),
+                new LightTextNode("world"),
+                new LightElementNode("span", isBlock: false, isSelfClosing: true),
+                new LightTextNode("!")
+            };
 
-        LightElementNode div = new LightElementNode("div", true, false);
-        div.AddClass("container");
-
-        LightElementNode h1 = new LightElementNode("h1", true, false);
-        LightTextNode h1Text = new LightTextNode("Welcome to LightHTML!");
-        h1.AddChild(h1Text);
-
-        LightElementNode p = new LightElementNode("p", false, false);
-        LightTextNode pText = new LightTextNode("This is a simple example of LightHTML markup language.");
-        p.AddChild(pText);
-
-        LightElementNode br = new LightElementNode("br", false, true);
-        Console.WriteLine("Break tag:");
-        Console.WriteLine(br.OuterHTML());
-        Console.WriteLine();
-
-
-        div.AddChild(h1);
-        div.AddChild(p);
-
-        Console.WriteLine("Outer HTML:");
-        Console.WriteLine(div.OuterHTML());
-        Console.WriteLine();
-
-        Console.WriteLine("Inner HTML:");
-        Console.WriteLine(div.InnerHTML());
+            var htmlVisitor = new HTMLVisitor();
+            Client.GenerateHTML(nodes, htmlVisitor);
+            Console.WriteLine(htmlVisitor.GetHTML());
+        }
     }
-
 }

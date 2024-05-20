@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComposerClassLibrary.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ namespace ComposerClassLibrary
         private List<LightNode> _children;
         private List<string> _classes;
 
+        public string Tag => _tag;
+        public List<string> Classes => _classes;
+
         public LightElementNode(string tag, bool isBlock, bool isSelfClosing)
         {
             _tag = tag;
@@ -21,6 +25,11 @@ namespace ComposerClassLibrary
             _isSelfClosing = isSelfClosing;
             _children = new List<LightNode>();
             _classes = new List<string>();
+        }
+
+        public override void Accept(INodeVisitor visitor)
+        {
+            visitor.VisitElementNode(this);
         }
 
         public void AddChild(LightNode child)

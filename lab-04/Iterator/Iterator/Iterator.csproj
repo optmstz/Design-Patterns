@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ComposerClassLibrary">
+      <HintPath>..\..\..\lab-03\Composer\ComposerClassLibrary\bin\Debug\net8.0\ComposerClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

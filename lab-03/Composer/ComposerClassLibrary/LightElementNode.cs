@@ -1,4 +1,5 @@
-﻿using ComposerClassLibrary.State_pattern;
+using ComposerClassLibrary.Visitor;
+using ComposerClassLibrary.State_pattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace ComposerClassLibrary
         private List<LightNode> _children;
         private List<string> _classes;
         private ElementState? _state;
+
+        public string Tag => _tag;
+        public List<string> Classes => _classes;
 
         public LightElementNode(string tag, bool isBlock, bool isSelfClosing)
         {
@@ -41,6 +45,11 @@ namespace ComposerClassLibrary
         public void Collapse()
         {
             _state?.Collapse();
+        }
+
+        public override void Accept(INodeVisitor visitor)
+        {
+            visitor.VisitElementNode(this);
         }
 
         public void AddChild(LightNode child)

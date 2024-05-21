@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComposerClassLibrary.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,10 +26,15 @@ namespace ComposerClassLibrary
         {
             return "";
         }
-
+        
         protected override void OnTextRendered()
         {
             Console.WriteLine("LightTextNode: Text rendered.");
+        }
+        
+        public override void Accept(INodeVisitor visitor)
+        {
+            visitor.VisitTextNode(this);
         }
     }
 }

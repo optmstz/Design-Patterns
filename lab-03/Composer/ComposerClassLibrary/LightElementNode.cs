@@ -1,4 +1,6 @@
-﻿using System;
+using ComposerClassLibrary.Visitor;
+using ComposerClassLibrary.State_pattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,10 @@ namespace ComposerClassLibrary
         private bool _isSelfClosing;
         private List<LightNode> _children;
         private List<string> _classes;
+        private ElementState? _state;
+
+        public string Tag => _tag;
+        public List<string> Classes => _classes;
 
         public LightElementNode(string tag, bool isBlock, bool isSelfClosing)
         {
@@ -21,6 +27,29 @@ namespace ComposerClassLibrary
             _isSelfClosing = isSelfClosing;
             _children = new List<LightNode>();
             _classes = new List<string>();
+            TransitionTo(new ExpandedState());
+        }
+
+        public void TransitionTo(ElementState state)
+        {
+            Console.WriteLine($"Transitioning to {state.GetType().Name} state.");
+            _state = state;
+            _state.SetElement(this);
+        }
+
+        public void Display()
+        {
+            _state?.Display();
+        }
+
+        public void Collapse()
+        {
+            _state?.Collapse();
+        }
+
+        public override void Accept(INodeVisitor visitor)
+        {
+            visitor.VisitElementNode(this);
         }
 
         public void AddChild(LightNode child)
@@ -43,8 +72,9 @@ namespace ComposerClassLibrary
 
         public override string OuterHTML()
         {
-            StringBuilder sb = new StringBuilder();
+            Display();
 
+            StringBuilder sb = new StringBuilder();
             sb.Append($"<{_tag} class=\"{string.Join(" ", _classes)}\">");
             OnStylesApplied();
 
@@ -60,6 +90,7 @@ namespace ComposerClassLibrary
 
             return sb.ToString();
         }
+
 
         public override string InnerHTML()
         {

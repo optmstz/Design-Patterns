@@ -1,15 +1,29 @@
-﻿using ComposerClassLibrary;
 
-class Program
+﻿using ComposerClassLibrary.Visitor;
+using ComposerClassLibrary;
+using System;
+using System.Collections.Generic;
+using ComposerClassLibrary.Command;
+
+namespace ComposerClassLibrary
 {
-    static void Main(string[] args)
+    class Program
     {
-        LightElementNode div = new LightElementNode("div", true, false);
-        div.AddClass("container");
+        static void Main(string[] args)
+        {
+            var nodes = new List<LightNode>
+            {
+                new LightElementNode("div", isBlock: true, isSelfClosing: false),
+                new LightTextNode("Hello, "),
+                new LightElementNode("span", isBlock: false, isSelfClosing: false),
+                new LightTextNode("world"),
+                new LightElementNode("span", isBlock: false, isSelfClosing: true),
+                new LightTextNode("!")
+            };
 
-        LightTextNode text = new LightTextNode("Some text");
-        div.AddChild(text);
-
-        Console.WriteLine(div.OuterHTML());
+            var htmlVisitor = new HTMLVisitor();
+            Client.GenerateHTML(nodes, htmlVisitor);
+            Console.WriteLine(htmlVisitor.GetHTML());
+        }
     }
 }

@@ -55,11 +55,19 @@ namespace ComposerClassLibrary
         public void AddChild(LightNode child)
         {
             _children.Add(child);
+            OnInserted();
+        }
+
+        public void RemoveChild(LightNode child)
+        {
+            _children.Remove(child);
+            OnRemoved();
         }
 
         public void AddClass(string className)
         {
             _classes.Add(className);
+            OnClassListApplied();
         }
 
         public override string OuterHTML()
@@ -68,6 +76,7 @@ namespace ComposerClassLibrary
 
             StringBuilder sb = new StringBuilder();
             sb.Append($"<{_tag} class=\"{string.Join(" ", _classes)}\">");
+            OnStylesApplied();
 
             foreach (var child in _children)
             {
@@ -94,9 +103,25 @@ namespace ComposerClassLibrary
 
             return sb.ToString();
         }
-        public List<LightNode> GetChildren()
+
+        protected override void OnInserted()
         {
-            return _children;
+            Console.WriteLine($"LightElementNode: Child inserted into {_tag}.");
+        }
+
+        protected override void OnRemoved()
+        {
+            Console.WriteLine($"LightElementNode: Child removed from {_tag}.");
+        }
+
+        protected override void OnStylesApplied()
+        {
+            Console.WriteLine($"LightElementNode: Styles applied to {_tag}.");
+        }
+
+        protected override void OnClassListApplied()
+        {
+            Console.WriteLine($"LightElementNode: Class list applied to {_tag}.");
         }
     }
 }

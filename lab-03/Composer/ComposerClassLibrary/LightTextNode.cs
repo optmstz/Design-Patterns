@@ -14,6 +14,7 @@ namespace ComposerClassLibrary
         public LightTextNode(string text)
         {
             _text = text;
+            OnTextRendered();
         }
 
         public override string OuterHTML()
@@ -25,7 +26,12 @@ namespace ComposerClassLibrary
         {
             return "";
         }
-
+        
+        protected override void OnTextRendered()
+        {
+            Console.WriteLine("LightTextNode: Text rendered.");
+        }
+        
         public override void Accept(INodeVisitor visitor)
         {
             visitor.VisitTextNode(this);
